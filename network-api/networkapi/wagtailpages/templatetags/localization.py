@@ -74,6 +74,7 @@ def localizedroutablepageurl(context, page, url_name, *args, **kwargs):
     )
     return url
 
+
 # Get the "current locale" version of some content object from Wagtail
 @register.simple_tag(takes_context=True)
 def localized_version(context, thing):
@@ -86,4 +87,3 @@ def localized_version(context, thing):
         return thing.get_translation(locale)
     except ObjectDoesNotExist:
         return thing
-
