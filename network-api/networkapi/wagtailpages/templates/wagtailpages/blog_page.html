@@ -10,7 +10,8 @@
 {% endif %}
 {% with category=page.specific.category.first %}
   {% if category %}
-    <meta property="article:section" content="{{ category }}" />
+    {% localized_version category as localized_category %}
+    <meta property="article:section" content="{{ localized_category }}" />
   {% endif %}
 {% endwith %}
 <link rel="canonical" href="{{ page.full_url }}" />
