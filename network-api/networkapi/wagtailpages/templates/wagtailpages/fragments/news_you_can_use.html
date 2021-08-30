@@ -32,7 +32,7 @@
           <div class="feature-content align-self-center">
             {% if first.category.count %}
               {% with category=first.category.first %}
-                {% localized_category category as localized_category %}
+                {% localized_version category as localized_category %}
                 <a class="h6-heading d-block mb-2" href="/blog/category/{{ category.slug }}">{{ localized_category }}</a>
               {% endwith %}
             {% else %}
