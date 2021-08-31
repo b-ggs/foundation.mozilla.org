@@ -18,7 +18,7 @@
       {% with category=page.specific.category.first %}
       {% if category and blog_index %}
         {% localized_version category as localized_category %}
-      | <a class="category" href="{{blog_index.url}}category/{{category.slug}}">{{ localized_category }}</a>
+      | <a class="category" href="{{blog_index.localized.url}}category/{{category.slug}}">{{ localized_category }}</a>
       {% endif %}
       {% endwith %}
     {% endif %}
